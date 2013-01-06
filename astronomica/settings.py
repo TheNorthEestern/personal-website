@@ -1,5 +1,4 @@
 # Django settings for astronomica project.
-import dj_database_url
 import os
 
 DEBUG = False
@@ -23,8 +22,6 @@ if bool(os.environ.get('LOCAL_DEV', False)):
    		 }
 	}
 	DEBUG = True
-else:
- 	DATABASES['default'] = dj_database_url.config()
 
 
 # Local time zone for this installation. Choices can be found here:
@@ -157,3 +154,5 @@ LOGGING = {
     }
 }
 
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
