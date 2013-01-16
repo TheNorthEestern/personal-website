@@ -1,7 +1,7 @@
 # Django settings for astronomica project.
 import os
 
-DEBUG = True
+DEBUG = False 
 COMPRESS_ENABLED = True
 TEMPLATE_DEBUG = DEBUG
 
