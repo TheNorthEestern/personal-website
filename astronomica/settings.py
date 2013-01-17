@@ -11,7 +11,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-if bool(os.environ.get('LOCAL_DEV', False)):
+if bool(os.environ.get('LOCAL_DEV', True)):
 	DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -23,6 +23,9 @@ if bool(os.environ.get('LOCAL_DEV', False)):
    		 }
 	}
 	DEBUG = True
+else:
+    import dj_database_url
+    DATABASES =  {'default':dj_database_url.config()}
 
 
 # Local time zone for this installation. Choices can be found here:
@@ -158,5 +161,3 @@ LOGGING = {
     }
 }
 
-import dj_database_url
-DATABASES =  {'default':dj_database_url.config()}
