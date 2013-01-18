@@ -15,8 +15,8 @@ if bool(os.environ.get('LOCAL_DEV', True)):
 	DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'capstone',                      # Or path to database file if using sqlite3.
-        'USER': 'capstone',                      # Not used with sqlite3.
+        'NAME': 'personal_website',                      # Or path to database file if using sqlite3.
+        'USER': 'personal_website',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': 'localhost',                
         'PORT': '',
