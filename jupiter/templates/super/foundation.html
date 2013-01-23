@@ -2,6 +2,9 @@
 <html>
   <head>
   <title>{% block title %}{% endblock %}</title>
+  <style>
+  {% block styles %}{% endblock %}
+  </style>
   {% load compress %}
   {% compress css %}
   <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css/" />
