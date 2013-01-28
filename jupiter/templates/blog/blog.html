@@ -1,12 +1,17 @@
 {% extends "super/foundation.html" %}
 {% block title %}My Blog{% endblock %}
 {% block content %}
+  <style type="text/css">
+    .blog-post{
+    }
+  </style>
   {% for post in object_list %}
-  <h2><a href="/blog/{{post.slug}}">{{ post.title }}</a></h2>
-      <div class="post_meta">
-        on {{ post.created }}
-      </div>
-      <div class="post_body">
+  <div class="blog-post span8">
+  <h5><a href="/blog/{{post.slug}}">{{ post.title }}</a></h5>
+      <cite class="meta-info">
+        on {{ post.created|date:"l, F d  (g:i a) " }}
+      </>
+      <div class="blog-post-body">
         {{ post.body|safe|linebreaks }} 
       </div>
       <div class="tags">
@@ -15,5 +20,6 @@
           {% if not forloop.last %}, {% endif %}
          {% endfor %}
       </div>
+   </div>
   {% endfor %}
 {% endblock %}
