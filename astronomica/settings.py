@@ -1,7 +1,7 @@
 # Django settings for astronomica project.
 import os
 import dj_database_url
-DATABASES =  {'default':dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+DATABASES =  {'default':dj_database_url.config(default=os.environ.get('HEROKU_POSTGRESQL_SILVER_URL'))}
 
 DEBUG = False
 COMPRESS_ENABLED = True
