@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     'south',
     'compressor',
     'storages',
+    'tastypie',
 )
 
 # A sample logging configuration. The only tangible logging
