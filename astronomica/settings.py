@@ -13,18 +13,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-if bool(os.environ.get('LOCAL_DEV', True)):
-	DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'personal_website',                      # Or path to database file if using sqlite3.
-        'USER': 'personal_website',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': 'localhost',                
-        'PORT': '',
-   		 }
-	}
-	DEBUG = True
+try:
+    from local_settings import *
+except ImportError:
+    pass
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
