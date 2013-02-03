@@ -3,4 +3,4 @@ venv
 *.swp
 CACHE/
 .DS_Store
-astronmica/local_settings.py
+astronomica/local_settings.py
