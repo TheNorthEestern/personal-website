@@ -4,7 +4,7 @@ import os
 import dj_database_url
 DATABASES =  {'default':dj_database_url.config()}
 
-DEBUG = False
+DEBUG = True
 COMPRESS_ENABLED = True 
 """
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
