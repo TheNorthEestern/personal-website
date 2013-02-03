@@ -1,10 +1,16 @@
 # Django settings for astronomica project.
 import os
+# from s3conf import *
 import dj_database_url
-DATABASES =  {'default':dj_database_url.config(default=os.environ.get('HEROKU_POSTGRESQL_SILVER_URL'))}
+DATABASES =  {'default':dj_database_url.config()}
 
 DEBUG = False
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = True 
+"""
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
+"""
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -152,4 +158,3 @@ LOGGING = {
         },
     }
 }
-

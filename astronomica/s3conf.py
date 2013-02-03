@@ -1,0 +1,4 @@
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = 'AKIAIHXPALLCNH5AY6UA'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='astro-jupiter'
