@@ -7,7 +7,7 @@ DATABASES =  {'default':dj_database_url.config()}
 DEBUG = False 
 COMPRESS_ENABLED = True 
 """
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage' 
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
 """
