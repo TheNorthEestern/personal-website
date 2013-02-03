@@ -8,10 +8,11 @@ from jupiter.api import PostResource
 v1_api = Api(api_name="v1")
 v1_api.register(PostResource())
 
-urlpatterns = patterns('',
+urlpatterns = patterns('jupiter.views',
         #url(r'^$',direct_to_template, {'template': 'static/index.html'}),
         url(r'^$',ListView.as_view(queryset=Post.objects.all().order_by("-created")[:3],template_name='dynamic/index.html')),
         url(r'^blog/$',ListView.as_view(queryset=Post.objects.all().order_by("-created")[:3],template_name='blog/blog.html')),
         url(r'^blog/(?P<slug>[-\w]+)$',DetailView.as_view(model=Post,template_name='blog/post.html')),
+        url(r'^tag/(?P<tag>\w+)$', 'tags'),
         url(r'^api/', include(v1_api.urls)),
 )
