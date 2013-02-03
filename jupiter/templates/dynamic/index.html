@@ -3,7 +3,7 @@
   {% include "inc/ember_basic.html" %}
 {% endblock %}
 {% block content %}
-  <div class="container" style="margin-top: 300px;">
+  <div class="container blog-container">
   {% for post in object_list %}
   <div class="blog-post span8">
   <h5><a href="/blog/{{post.slug}}">{{ post.title }}</a></h5>

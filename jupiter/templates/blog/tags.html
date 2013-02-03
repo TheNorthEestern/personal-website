@@ -3,7 +3,7 @@
   {% include "inc/ember_basic.html" %}
 {% endblock %}
 {% block content %}
-  <div class="container" style="margin-top: 300px;">
+  <div class="container blog-container">
   <h1>Posts about <em>{{tag}}</em></h1>
   {% for post in posts %}
     <p>{{ post.created|date:"l, F d  (g:i a) " }} -- <a href="/blog/{{post.slug}}">{{post.title}}</a></p>
