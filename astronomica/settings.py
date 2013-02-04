@@ -4,7 +4,7 @@ import os
 import dj_database_url
 DATABASES =  {'default':dj_database_url.config()}
 
-DEBUG = False 
+DEBUG = True 
 COMPRESS_ENABLED = True 
 # COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
