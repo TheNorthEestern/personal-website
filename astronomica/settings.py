@@ -1,17 +1,15 @@
 # Django settings for astronomica project.
 import os
-# from s3conf import *
 import dj_database_url
 DATABASES =  {'default':dj_database_url.config()}
 
 DEBUG = False 
 COMPRESS_ENABLED = True 
-# COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'astro-jupiter'
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
@@ -163,4 +161,11 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+TINYMCE_JS_URL = 'http://cdnjs.cloudflare.com/ajax/libs/tinymce/3.5.8/tiny_mce.js'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins':'table,searchreplace,paste',
+    'theme':'advanced',
+    'cleanup_on_startup':True,
+    'custom_undo_redo_levels' : 10,
 }

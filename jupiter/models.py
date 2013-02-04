@@ -1,12 +1,13 @@
 import datetime
 from django.db import models
+from tinymce.models import HTMLField
 from taggit.managers import TaggableManager
 
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
-    body = models.TextField()
+    body = HTMLField()
     created = models.DateTimeField(editable=False)
     tags = TaggableManager()
 
