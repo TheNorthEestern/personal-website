@@ -6,11 +6,20 @@ DATABASES =  {'default':dj_database_url.config()}
 
 DEBUG = False 
 COMPRESS_ENABLED = True 
-"""
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage' 
+# COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
 COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-COMPRESS_URL='http://astro-jupiter.s3.amazonaws.com/'
-"""
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'astro-jupiter'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+SECRET_KEY = os.environ.get('PERSONAL_WEBSITE_SECRETKEY')
+
+STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com'
+
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -83,7 +92,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'ta*van#fo237fpv2je!d0bp0=snyer7rjwwz(ad-61&amp;im&amp;#-=4'
+#SECRET_KEY = 'ta*van#fo237fpv2je!d0bp0=snyer7rjwwz(ad-61&amp;im&amp;#-=4'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
