@@ -164,7 +164,6 @@ LOGGING = {
     }
 }
 
-TINYMCE_JS_URL = '/static/js/tiny_mce/tiny_mce_src.js'
 TINYMCE_DEFAULT_CONFIG = {
     'plugins':'table,searchreplace,paste',
     'theme':'advanced',
