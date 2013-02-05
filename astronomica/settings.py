@@ -1,6 +1,7 @@
 # Django settings for astronomica project.
 import os
 import dj_database_url
+
 DATABASES =  {'default':dj_database_url.config()}
 
 DEBUG = False 
@@ -162,7 +163,8 @@ LOGGING = {
         },
     }
 }
-TINYMCE_JS_URL = 'http://cdnjs.cloudflare.com/ajax/libs/tinymce/3.5.8/tiny_mce.js'
+
+TINYMCE_JS_URL = '/static/js/tiny_mce/tiny_mce_src.js'
 TINYMCE_DEFAULT_CONFIG = {
     'plugins':'table,searchreplace,paste',
     'theme':'advanced',
