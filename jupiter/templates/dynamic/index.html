@@ -1,28 +1,9 @@
 {% extends "super/foundation.html" %}
 {% block scripts %}
-  {% include "inc/ember_basic.html" %}
+{% include "inc/ember_basic.html" %}
 {% endblock %}
 {% block content %}
   <div class="container blog-container">
-  {% for post in object_list %}
-  <div class="blog-post span8">
-  <h5><a href="/blog/{{post.slug}}">{{ post.title }}</a></h5>
-      <cite class="meta-info">
-        on {{ post.created|date:"l, F d  (g:i a) " }}
-      </>
-      <div class="blog-post-body">
-        {{ post.body|safe|linebreaks }} 
-      </div>
-      <div class="tags">
-         {% for tag in post.tags.all %}
-          <a href="/tag/{{tag}}">{{tag}}</a> 
-          {% if not forloop.last %}, {% endif %}
-         {% endfor %}
-      </div>
-   </div>
-  {% empty %}
-   <p>There aren't any posts just yet!</p>
-  {% endfor %}
-  </div>
+    {% include "blog/blog.html" %}
   </div>
 {% endblock %}

@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>{% block title %}{% endblock %}</title>
-  <style>
-  {% block styles %}{% endblock %}
-  </style>
-  {% load compress %}
-  {% compress css %}
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css/" />
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.min.css/" />
-  <link rel="stylesheet" type="text/css" href="/static/css/main.css/"  />
-  {% endcompress %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<style>
+{% block styles %}{% endblock %}
+</style>
+{% load compress %}
+{% compress css %}
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css/" />
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.min.css/" />
+<link rel="stylesheet" type="text/css" href="/static/css/main.css/"  />
+{% endcompress %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+      <div class="header-text">
         <p class="lead">Hey there, I'm <a href="/">Kacy James</a>. I <em>love</em> open-source software, design and among other things, <a href="http://bit.ly/dmDe">Star Wars</a>.</p>
         <p class="lead">Take a look around, and when you're done, check out some of my other footholds on the web.</p>
         <p class="lead">
-         <a href="http://dl.dropbox.com/u/13152762/resume.pdf">Resume</a> &middot;
-         <a href="http://github.com/TheNorthEestern/">GitHub</a> &middot;
-         <a href="http://dribbble.com/kacyjames/">Dribbble</a> &middot;
-         <a href="http://twitter.com/kacyjames">Twitter</a> &middot;
-         <a href="http://linkedin.com/in/kacyjames">LinkedIn</a>
+        <a href="http://dl.dropbox.com/u/13152762/resume.pdf">Resume</a> &middot;
+        <a href="http://github.com/TheNorthEestern/">GitHub</a> &middot;
+        <a href="http://dribbble.com/kacyjames/">Dribbble</a> &middot;
+        <a href="http://twitter.com/kacyjames">Twitter</a> &middot;
+        <a href="http://linkedin.com/in/kacyjames">LinkedIn</a>
     </div>
-   </div>
   </div>
-  {% block content %}{% endblock %}
-  {% compress js %}
-  <script src="/static/js/jquery.min.js/"></script>
-  <script src="/static/js/bootstrap.min.js/"></script>
-  {% endcompress %}
-  {% block scripts %}{% endblock %}
-  </body>
+</div>
+<div class="container">
+{% block content %}{% endblock %}
+{% compress js %}
+<script src="/static/js/jquery.min.js/"></script>
+<script src="/static/js/bootstrap.min.js/"></script>
+{% endcompress %}
+{% block scripts %}{% endblock %}
+</div>
+</body>
 </html>

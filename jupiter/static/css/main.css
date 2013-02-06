@@ -1,9 +1,40 @@
+@media (min-width: 1200px){
+  .header-text{
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) { 
+  .header-text{
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px){
+  .header-text{
+    width: 400px;
+    margin: 0 auto;
+  }
+  body{
+    padding:0;
+  }
+}
+@media (max-width: 480px){
+  body{
+   margin: 0;
+  }
+}
+
 body{
   font-family: Georgia, sans-serif;
+}
+.blog-container{
+  padding: 0 80px 0 80px;
 }
 .navbar-inner{
   color: white;
   border: none;
+  border-radius: 0;
   background-color: rgba(121, 189, 154,1);
   background-image: none;
   padding: 80px 0 80px 0;
@@ -21,5 +52,5 @@ body{
   box-shadow: none;
 }
 .blog-container{
-  margin-top: 350px;
+  margin-top: 15px;
 }
