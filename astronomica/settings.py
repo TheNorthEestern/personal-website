@@ -163,11 +163,3 @@ LOGGING = {
         },
     }
 }
-
-TINYMCE_JS_URL = 'http://cdnjs.cloudflare.com/ajax/libs/tinymce/3.5.8/tiny_mce.js'
-TINYMCE_DEFAULT_CONFIG = {
-    'plugins':'table,searchreplace,paste',
-    'theme':'advanced',
-    'cleanup_on_startup':True,
-    'custom_undo_redo_levels' : 10,
-}
