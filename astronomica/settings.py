@@ -133,6 +133,8 @@ INSTALLED_APPS = (
     'storages',
     'tastypie',
     'django_extensions',
+    'ckeditor',
+    'django_wysiwyg',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -163,3 +165,5 @@ LOGGING = {
         },
     }
 }
+CKEDITOR_UPLOAD_PATH = ''
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
