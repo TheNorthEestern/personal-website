@@ -133,7 +133,7 @@ INSTALLED_APPS = (
     'storages',
     'tastypie',
     'django_extensions',
-    'ckeditor',
+    #'ckeditor',
     'django_wysiwyg',
 )
 
